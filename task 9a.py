@@ -5,3 +5,12 @@
 5. Use Machine Learning to continually improve the chatbot's ability to understand and respond to user input.
 6. Integrate the chatbot with your preferred messaging platform or channel (e.g., web chat, social media, etc.) using API connectors.
 7. Test your chatbot frequently, and use user feedback to improve its performance and provide the best possible experience for your users.
+a.	Simple ChatGPT using openai
+Code:
+Pip install openai
+import openai
+
+openai.api_key = "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"
+
+completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Give me 3 ideas that i could build using openai apis"}])
+print(completion.choices[0].message.content)
